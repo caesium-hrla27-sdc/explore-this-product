@@ -23,17 +23,29 @@
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node 8.6.0  
+  - Node 8.8.0 required to use artillery for testing RPS
 - etc
 
 ## Development
 
 ### Installing Dependencies
 
-From within the root directory:
+From within the root directory of dependency:
 
 ```sh
 npm install -g webpack
 npm install
 ```
 
+
+# Setup Mongo
+Sudo su
+sudo mongod
+
+* New terminal window
+npm start 
+
+* New terminal window
+mongo
+use exploreProducts
