@@ -1,0 +1,126 @@
+{
+  "_id": "5c85fd56ccf473f2bfca1a9b",
+  "productId": 21,
+  "exploresLists": [
+    {
+      "comments": "mollitia dolor dolorem",
+      "date": "Feb 2",
+      "headerComments": "esse aut quo",
+      "image": "http://lorempixel.com/640/480/fashion",
+      "productBrand": "SMASHBOX",
+      "user": "Cynthia_West"
+    },
+    {
+      "comments": "sequi sint nisi",
+      "date": "Aug 27",
+      "headerComments": "sapiente perspiciatis consequatur",
+      "image": "http://lorempixel.com/640/480/cats",
+      "productBrand": "URBAN DECAY",
+      "user": "Winona_Lindgren"
+    },
+    {
+      "comments": "quis consequatur quia",
+      "date": "Sep 3",
+      "headerComments": "doloremque fugiat commodi",
+      "image": "http://lorempixel.com/640/480/food",
+      "productBrand": "ANASTASIA BEVERLY HILLS",
+      "user": "Katheryn.Krajcik"
+    },
+    {
+      "comments": "qui sed dolores",
+      "date": "Mar 18",
+      "headerComments": "distinctio at maiores",
+      "image": "http://lorempixel.com/640/480/transport",
+      "productBrand": "ANASTASIA BEVERLY HILLS",
+      "user": "Franco.Beahan72"
+    },
+    {
+      "comments": "repellat quisquam est",
+      "date": "Feb 24",
+      "headerComments": "voluptatem qui qui",
+      "image": "http://lorempixel.com/640/480/fashion",
+      "productBrand": "URBAN DECAY",
+      "user": "Madonna43"
+    },
+    {
+      "comments": "officiis sit perferendis",
+      "date": "Sep 25",
+      "headerComments": "molestias accusantium id",
+      "image": "http://lorempixel.com/640/480/food",
+      "productBrand": "SMASHBOX",
+      "user": "Willa_OKeefe92"
+    }
+  ],
+  "videosLists": [
+    {
+      "videoTitle": "omnis ut ducimus",
+      "videosList": "https://www.youtube.com/embed/SmvczsCck1Q",
+      "videosThumbnail": "http://lorempixel.com/640/480/food"
+    },
+    {
+      "videoTitle": "rem a molestiae",
+      "videosList": "https://www.youtube.com/embed/SmvczsCck1Q",
+      "videosThumbnail": "http://lorempixel.com/640/480/abstract"
+    },
+    {
+      "videoTitle": "ratione et amet",
+      "videosList": "https://www.youtube.com/embed/SmvczsCck1Q",
+      "videosThumbnail": "http://lorempixel.com/640/480/business"
+    }
+  ],
+  "articlesLists": [
+    {
+      "image": "http://lorempixel.com/640/480/city",
+      "title": "placeat"
+    }
+  ],
+  "innerCarousel": [
+    {
+      "prodDesc": "aliquid consequatur enim",
+      "prodPrice": 0,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "ANASTASIA BEVERLY HILLS"
+    },
+    {
+      "prodDesc": "harum odio tempore",
+      "prodPrice": 6,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "CAUDALIE"
+    },
+    {
+      "prodDesc": "nisi neque dolorem",
+      "prodPrice": 8,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "SMASHBOX"
+    },
+    {
+      "prodDesc": "ipsum ut delectus",
+      "prodPrice": 6,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "SMASHBOX"
+    },
+    {
+      "prodDesc": "earum eos earum",
+      "prodPrice": 0,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "URBAN DECAY"
+    },
+    {
+      "prodDesc": "iusto doloremet",
+      "prodPrice": 5,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "ANASTASIA BEVERLY HILLS"
+    },
+    {
+      "prodDesc": "saepe estreprehenderit",
+      "prodPrice": 9,
+      "productImg": "http://lorempixel.com/640/480/fashion",
+      "productNames": "ANASTASIA BEVERLY HILLS"
+    },
+    {
+      "prodDesc": "quis et est",
+      "prodPrice": 7,
+      "productNames": "URBAN DECAY"
+    }
+  ]
+}
