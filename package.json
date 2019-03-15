@@ -14,7 +14,7 @@
     "start": "nodemon ./server/index.js",
     "build": "webpack -d --watch",
     "seed": "node ./db/index.js",
-    "gen": "node generateData.js",
+    "gen": "node ./db/postgresql/genData.js",
     "attack": "artillery run testArtillery.yml"
   },
   "dependencies": {

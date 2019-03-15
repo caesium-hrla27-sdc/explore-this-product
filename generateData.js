@@ -2,7 +2,7 @@ const fs = require('fs');
 const file = fs.createWriteStream('./exploresData.json');
 
 // All mock data
-const { generator } = require('./db/dataFormat.js');
+const { generator } = require('./db/mongo/dataFormat.js');
 
 
 function writeOneMillionTimes(writer, data, encoding, callback) {
@@ -56,7 +56,10 @@ writeOneMillionTimes(file, '', "utf8", (err) => {
 //mongoimport --db exploreProducts --collection explores --file exploresData.txt
 //mongoimport --db exploreProducts --collection explores --file exploresData.json
 
-// db.explores.find({productId: 99992299}).explain("executionStats")
+// db.explores.find({productId: 9999229}).explain("executionStats")
 
 // Hash index created on productId
 //  db.explores.createIndex( { productId: "hashed" } )
+
+// Data Dump
+// mongodump --gzip --db exploreProducts
