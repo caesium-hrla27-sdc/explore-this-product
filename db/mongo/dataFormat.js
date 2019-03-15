@@ -1,5 +1,4 @@
-const mockarooData = require('../data.js');
-const { articlesImage, exploresImage, youtubeVideo, youtubeThumbnail, month, productImg, productNames } = require('../sephoraData.js');
+const { articlesImage, exploresImage, youtubeVideo, youtubeThumbnail, month, productImg, productNames } = require('../../sephoraData.js');
 const faker = require('faker');
 
 

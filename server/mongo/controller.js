@@ -1,5 +1,6 @@
 // const { fetchExplore } = require('../db/dbHelpers.js');
-const Explores = require('../db/model.js');
+// const Explores = require('../../db/mongo/index.js');
+const Explores = require('../../db/mongo/model.js');
 
 module.exports = {
     explores: {
