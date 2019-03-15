@@ -2,10 +2,10 @@ const express = require('express');
 const path = require('path');
 const parser = require('body-parser');
 const morgan = require('morgan');
-const controller = require('./controller.js');
+const controller = require('./mongo/controller.js');
 const PORT = 3005;
-// const model = require('../db/model.js');
-const db = require('../db/index.js');
+
+const db = require('../db/mongo/index.js');
 
 const app = express();
 
