@@ -1,4 +1,4 @@
-const Explores = require('../db/model.js');
+const Explores = require('./model.js');
 
 // Query database using id
 let fetchExplore = (id, callback) => {
