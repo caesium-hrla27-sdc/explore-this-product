@@ -24,21 +24,21 @@ class Explores extends React.Component {
       modalIndex: null,
       checkedBox: false
     };
-    this.fetchData =this.fetchData.bind(this);
+    this.fetchData = this.fetchData.bind(this);
     this.updateModalIndex = this.updateModalIndex.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.checkBox = this.checkBox.bind(this);
   }
 
   componentDidMount() {
-    this.fetchData();
+    this.fetchData(Math.floor((Math.random() * 10000000) + 1));
   }
 
-  fetchData() {
+  fetchData(id) {
     axios
-      .get('/explores')
+      .get(`/explores/${id}`)
       .then((data) => {
-        this.setState({ lists: data.data }, () => {console.log(this.state.lists)})
+        this.setState({ lists: data.data }, () => { console.log(data.data) })
       })
       .catch(err => {
         console.log(err);
@@ -53,7 +53,7 @@ class Explores extends React.Component {
     this.setState({ modalIndex: null });
   }
 
-  checkBox () {
+  checkBox() {
     this.setState({ checkedBox: !this.state.checkedBox })
   }
 
@@ -65,71 +65,71 @@ class Explores extends React.Component {
         {this.state.lists[0].exploresLists === '' ? (
           <div />
         ) : (
-          <div className={styles.exploreContainer}>
-            <div className={styles.head0}>Explore This Product</div>
-            <div className={styles.container}>
-              <div className={styles.head1}>
-                <div className={styles.looks}>
-                  Looks {'(' + this.state.lists[0].exploresLists.length + ')'}
+            <div className={styles.exploreContainer}>
+              <div className={styles.head0}>Explore This Product</div>
+              <div className={styles.container}>
+                <div className={styles.head1}>
+                  <div className={styles.looks}>
+                    Looks {'(' + this.state.lists[0].exploresLists.length + ')'}
+                  </div>
+                  <div
+                    style={{ width: '18px', height: '18px', alignSelf: 'center' }}
+                  >
+                    <Checkbox
+                      checkBox={this.checkBox}
+                      checkedBox={this.state.checkedBox}
+                    />
+                  </div>
+                  <div className={styles.showLooks}>Show looks from my</div>
+                  <img className={styles.beautyMatch} src={`https://s3-us-west-1.amazonaws.com/sephoraimage/BeautyMatchIcon.png`} />
+                  <div
+                    style={{
+                      width: '18px',
+                      height: '18px',
+                      margin: '3px',
+                      alignSelf: 'center'
+                    }}
+                  >
+                    <QuestionBubble />
+                  </div>
                 </div>
-                <div
-                  style={{ width: '18px', height: '18px', alignSelf: 'center' }}
-                >
-                  <Checkbox 
-                  checkBox={this.checkBox}
-                  checkedBox={this.state.checkedBox}
+                <div className={styles.carouselContainer}>
+                  <Carousel
+                    updateModalIndex={this.updateModalIndex}
+                    lists={this.state.lists[0].exploresLists}
+                    component={ExploresList}
+                    listLength={this.state.lists[0].exploresLists.length}
+                    itemDisplay={5}
+                    compCarouselStyles={styles}
+                    imageSize={-189.5}
+                    translateStart={-25}
                   />
                 </div>
-                <div className={styles.showLooks}>Show looks from my</div>
-                <img className={styles.beautyMatch} src={`https://s3-us-west-1.amazonaws.com/sephoraimage/BeautyMatchIcon.png`} />
+              </div>
+              <Modal
+                lists={this.state.lists[0].exploresLists}
+                modalIndex={this.state.modalIndex}
+                hideModal={this.closeModal}
+                innerCarouselLists={this.state.lists[0].innerCarousel}
+              />
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <div
                   style={{
-                    width: '18px',
-                    height: '18px',
-                    margin: '3px',
+                    width: '1076px',
+                    height: '250px',
+                    display: 'flex',
+                    flexWrap: 'nowrap',
+                    marginTop: '35px',
+                    justifyContent: 'space-between',
                     alignSelf: 'center'
                   }}
                 >
-                  <QuestionBubble />
+                  <Videos lists={this.state.lists[0].videosLists} />
+                  <Articles lists={this.state.lists[0].articlesLists} />
                 </div>
               </div>
-              <div className={styles.carouselContainer}>
-                <Carousel
-                  updateModalIndex={this.updateModalIndex}
-                  lists={this.state.lists[0].exploresLists}
-                  component={ExploresList}
-                  listLength={this.state.lists[0].exploresLists.length}
-                  itemDisplay={5}
-                  compCarouselStyles={styles}
-                  imageSize={-189.5}
-                  translateStart={-25}
-                />
-              </div>
             </div>
-            <Modal
-              lists={this.state.lists[0].exploresLists}
-              modalIndex={this.state.modalIndex}
-              hideModal={this.closeModal}
-              innerCarouselLists={this.state.lists[0].innerCarousel}
-            />
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <div
-                style={{
-                  width: '1076px',
-                  height: '250px',
-                  display: 'flex',
-                  flexWrap: 'nowrap',
-                  marginTop: '35px',
-                  justifyContent: 'space-between',
-                  alignSelf: 'center'
-                }}
-              >
-                <Videos lists={this.state.lists[0].videosLists} />
-                <Articles lists={this.state.lists[0].articlesLists} />
-              </div>
-            </div>
-          </div>
-        )}
+          )}
       </div>
     );
   }
