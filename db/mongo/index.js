@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://lucky:pwd@18.222.24.12:7770/exploreProducts', {
+mongoose.connect('mongodb://lucky:pwd@18.222.24.12:27017/exploreProducts', {
   useNewUrlParser: true
 });
 // mongoose.connect('mongodb://localhost/exploreProducts', {
